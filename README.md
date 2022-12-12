@@ -27,7 +27,7 @@ from the given signals,
 4) dividing prepared samples into training and test data and then training
 a GMM model of each animal's activity,
 5) testing the effectiveness of the classifier using different parameters such as
-"duration", "window_length", "hop_length" etc.,
+"_duration_", "_window_length_", "_hop_length_" etc.,
 6) saving results of the training to the ._txt_ file (considering the number of correctly
 classified recordings of each animal's activity),
 7) drawing graphs and histograms from the samples.
