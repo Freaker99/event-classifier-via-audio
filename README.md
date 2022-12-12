@@ -2,7 +2,7 @@
 This program was created during working on engineering thesis entitled 
 "**Identification of the existential functions of animals in the terrarium 
 based on the analysis of acoustic signals**". For full documentation of the
-project visit this page.
+project visit this page:
 [Instructable](https://www.instructables.com/Event-Classification-Via-Audio-for-Pogona-Vitticep/)
 
 The project investigated the behavior of a bearded dragon in a terrarium.
