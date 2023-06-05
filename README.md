@@ -1,4 +1,4 @@
-# EventClassifierViaAudio
+# Event Classifier Via Audio
 This program was created during working on engineering thesis entitled 
 "**Identification of the existential functions of animals in the terrarium 
 based on the analysis of acoustic signals**". For full documentation of the
@@ -10,6 +10,7 @@ There were distinguished three types of activities such as **running, eating
 and resting (acoustic background)** of the agama. The main goal of the project was to create
 a program that would recognize the animal's activity and save the information
 about it to a text file along with the time and date of the activity.
+
 
 The **acquisition.py** script is responsible for recording the sounds in the
 terrarium at set intervals. It is possible to manipulate the recording parameters
@@ -34,7 +35,7 @@ classified recordings of each animal's activity),
 
 The **analysis_and_classification.py** script is basically responsible for analyzing the
 recording in terms of comparing the spectral features and other parameters with those in
-the trained model and classifying the real time recording into appropriate group of activity.
+the trained model and classifying the real time recording into appropriate group of activity. So that is:
 1) loading the GMM models from a ._bin_ file,
 2) extracting coefficient from the given signal and comparing them with those in trained models,
 3) calculating and drawing SPL (sound pressure level) of the given signal,
