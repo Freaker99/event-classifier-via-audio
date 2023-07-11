@@ -41,10 +41,7 @@ the trained model and classifying the real time recording into appropriate group
 3) calculating and drawing SPL (sound pressure level) of the given signal,
 4) connecting with the AGH university server via SSH.
 
-<br/>
 
-And finally, here is the Bearded agama that contributed to the success of the project :)
-
-<br/>
+And finally, here is the Bearded agama that contributed to the success of the project.
 
 ![Alt text](bearded_agama.jpg?raw=true)
