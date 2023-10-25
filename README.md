@@ -1,47 +1,50 @@
 # Event Classifier Via Audio
-This program was created during working on engineering thesis entitled 
-"**Identification of the existential functions of animals in the terrarium 
-based on the analysis of acoustic signals**".\
-For full documentation of the project please visit this page:
-[Instructable](https://www.instructables.com/Event-Classification-Via-Audio-for-Pogona-Vitticep/)
 
-The project investigated the behavior of a bearded dragon in a terrarium.
-There were distinguished three types of activities such as **running, eating
-and resting (acoustic background)** of the agama. The main goal of the project was to create
-a program that would recognize the animal's activity and save the information
-about it to a text file along with the time and date of the activity.
+**Overview**
 
+This program was developed as part of an engineering thesis titled "Identification of the Existential Functions of Animals in the Terrarium Based on the Analysis of Acoustic Signals." For full documentation of the project, please visit this page: [Instructable](https://www.instructables.com/Event-Classification-Via-Audio-for-Pogona-Vitticep/)
 
-The **acquisition.py** script is responsible for recording the sounds in the
-terrarium at set intervals. It is possible to manipulate the recording parameters
-such as recording time, recording interval, sampling rate, etc. The optimal 
-parameter values were chosen by testing effectiveness of the classifier
-for different values of the recording parameters. Recordings are saved to
-the selected folder using the date and time as the file name.
+## Project Description
 
-The **audio_dataset_loader.py** script is responsible for:
-1) dividing given _.wav_ file into shorter recordings with the given parameter
-of "_duration_", creating appropriately named folders and saving the recordings,
-2) extracting specific spectral features and MFCC (Mel-frequency cepstral coefficients)
-from the given signals,
-3) creating GMM models of each animal's activity based on extracted coefficients,
-4) dividing prepared samples into training and test data and then training
-a GMM model of each animal's activity,
-5) testing the effectiveness of the classifier using different parameters such as
-"_duration_", "_window_length_", "_hop_length_" etc.,
-6) saving results of the training to the ._txt_ file (considering the number of correctly
-classified recordings of each animal's activity),
-7) drawing graphs and histograms from the samples.
+The project focused on studying the behavior of a bearded dragon :dragon: in a terrarium. Three primary types of activities were identified, including running, eating, and resting (acoustic background) of the agama. The main objective was to create a program capable of recognizing the animal's activity and saving information, including the time and date of the activity, to a text file.
 
-The **analysis_and_classification.py** script is basically responsible for analyzing the
-recording in terms of comparing the spectral features and other parameters with those in
-the trained model and classifying the real time recording into appropriate group of activity. So that is:
-1) loading the GMM models from a ._bin_ file,
-2) extracting coefficient from the given signal and comparing them with those in trained models,
-3) calculating and drawing SPL (sound pressure level) of the given signal,
-4) connecting with the AGH university server via SSH.
+## Data Acquisition
 
+### Acquisition.py
 
-And finally, here is the Bearded agama that contributed to the success of the project.
+The `acquisition.py` script is responsible for recording sounds in the terrarium at specified intervals. It allows for the manipulation of recording parameters such as recording time, recording interval, sampling rate, and more. Optimal parameter values were determined through testing the classifier's effectiveness with varying recording parameters. Recordings are saved to the selected folder using the date and time as the file name.
+
+## Audio Data Handling
+
+### Audio_dataset_loader.py
+
+The `audio_dataset_loader.py` script is responsible for several tasks, including:
+
+- Dividing a given .wav file into shorter recordings with a specified "duration" parameter.
+- Creating appropriately named folders and saving the recordings.
+- Extracting specific spectral features and Mel-frequency cepstral coefficients (MFCC) from the recorded signals.
+- Creating Gaussian Mixture Model (GMM) models for each animal's activity based on the extracted coefficients.
+- Splitting prepared samples into training and test data.
+- Training a GMM model for each animal's activity.
+- Testing the classifier's effectiveness using different parameters, such as "duration," "window_length," "hop_length," etc.
+- Saving the training results to a .txt file, which includes the number of correctly classified recordings for each animal's activity.
+- Generating graphs and histograms from the collected samples.
+
+## Real-time Audio Classification
+
+### Analysis_and_classification.py
+
+The `analysis_and_classification.py` script is primarily responsible for analyzing real-time recordings. It does so by comparing spectral features and other parameters with those in the trained models and classifying the recordings into the appropriate activity group. The tasks include:
+
+- Loading the GMM models from a .bin file.
+- Extracting coefficients from the given signal and comparing them with those in the trained models.
+- Calculating and displaying the sound pressure level (SPL) of the given signal.
+- Establishing a connection with the AGH University server via SSH.
+
+## Project Contributor
+
+The success of this project was greatly influenced by the contribution of the Bearded Agama, a remarkable animal.
 
 ![Alt text](bearded_agama.jpg?raw=true)
+
+Thank you for your interest in "our" project! :dragon:
